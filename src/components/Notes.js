@@ -1,16 +1,16 @@
 //export default body javascript
 import Note from "./Note.js";
 
-const Notes = (notes, onDelete) => {
-  console.log(notes);
+const Notes = (props) => {
+  console.log(props.notes);
   return (
     <>
-      {notes.map((note) => (
+      {props.notes.map((note) => (
         <Note
           key={note.id}
           content={note.content}
           title={note.title}
-          onDelete={onDelete}
+          onDelete={props.onDelete}
         />
       ))}
     </>

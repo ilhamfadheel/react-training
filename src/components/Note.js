@@ -4,37 +4,37 @@ const Note = ({ key, title, content, onDelete }) => {
   return (
     <>
       <div className="task">
-        <div>
-          <p
-            className="taskName"
+        <div className="taskName">
+          <h1
             style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              borderBottom: "1px solid #ccc",
-              marginBottom: "10px",
-              marginTop: "0",
+              margin: "0",
             }}
           >
-            <h1> {title} </h1>
-            {/* {note.title} */}
-            <div>
-              <p>
-                <FaTimes onClick={() => onDelete(key)} className="delIcon" />
-              </p>
-            </div>
-          </p>
-          <p className="taskContent">
-            {content}
-            {/* {note.content} */}
-          </p>
+            {" "}
+            {title}{" "}
+          </h1>
+          {/* eslint-disable-next-line */}
+          <a>
+            <FaTimes onClick={() => onDelete(key)} className="delIcon" />
+          </a>
+        </div>
+        <div className="taskContent">
+          <p>{content}</p>
         </div>
       </div>
       <style>
         {`
+        .taskName{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          border-bottom: 1px solid #ccc;
+          margin-bottom: 10px;
+          margin-top: 0;
+        }
             .task {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 border: 1px solid #ccc;
                 margin: 10px;
                 padding: 10px 20px;
