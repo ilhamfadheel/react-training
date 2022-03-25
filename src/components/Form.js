@@ -117,8 +117,8 @@ const Form = () => {
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: center;
-          background-image:
-          linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 20%), url(https://i.imgur.com/TYs43eJ.jpg);
+          padding: 2px;
+          margin: 10px 0px;;
         }
             input {
                 width: 100%;

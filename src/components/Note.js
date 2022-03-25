@@ -14,9 +14,9 @@ const Note = ({ key, title, content, onDelete }) => {
             {title}{" "}
           </h1>
           {/* eslint-disable-next-line */}
-          <a>
+          {/* <a>
             <FaTimes onClick={() => onDelete(key)} className="delIcon" />
-          </a>
+          </a> */}
         </div>
         <div className="taskContent">
           <p>{content}</p>
@@ -32,17 +32,15 @@ const Note = ({ key, title, content, onDelete }) => {
           margin-bottom: 10px;
           margin-top: 0;
         }
-            .task {
-                display: flex;
-                flex-direction: column;
-                border: 1px solid #ccc;
-                margin: 10px;
-                padding: 10px 20px;
-                width: 20%;
-                background-color: #f8f8f8;
-                border-radius: 4px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+        .task {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ccc;
+            padding: 10px 30px;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px 10px;
             }
         `}
       </style>
